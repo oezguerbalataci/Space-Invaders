@@ -13,8 +13,10 @@ function setup() {
 
   // load images
   bg = loadImage("images/background.png");
+  // Create Canvas
   my_canvas = createCanvas(1024, 768);
   my_canvas.parent('my_canvas');
+
   spaceImg = loadImage("images/space.png");
   bulletImg = loadImage("images/bullet.png");
   alienImg = loadImage("images/alien.png");
