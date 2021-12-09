@@ -16,8 +16,8 @@ class Projectile {
 
 class AlienProjectile{
   constructor(x,y,img){
-    this.x =x;
-    this.y = y;
+    this.x =x+16;
+    this.y = y+56;
     this.velocity = 14;
     this.img = img;
     this.w =32;
