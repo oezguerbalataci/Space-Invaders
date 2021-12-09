@@ -1,5 +1,10 @@
 # Space Invaders
  Space Invaders like clone written in Javascript with p5.js
+ 
+## Click the link below to play online
+[I'm an inline-style link with title](https://oezguerbalataci.github.io/Space-Invaders/ "Space Invaders")
+
+ 
 ## How to Install
 - Clone the repository
 - Start a local server for index.html file
