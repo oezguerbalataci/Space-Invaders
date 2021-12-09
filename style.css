@@ -10,3 +10,7 @@ body{
 .btn-primary:active{
     background-color: #BDBDBD;
 }
+#restart_button{
+    margin-top: 2em;
+    margin-bottom: 2em;
+}

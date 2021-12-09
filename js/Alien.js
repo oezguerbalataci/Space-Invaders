@@ -36,25 +36,25 @@ class Alien {
 function alienMove() {
   if (aliens.length != 0) {
     if (aliens[aliens.length - 1].x >= 960) {
-      if (aliens.length != 0) {
-        for (element of aliens) {
-          element.direction = -1;
-          element.move_indent();
-        }
-      }
-
-      if (aliens2.length != 0) {
-        for (element of aliens2) {
-          element.direction = -1;
-          element.move_indent();
-        }
-      }
       if (aliens3.length != 0) {
         for (element of aliens3) {
           element.direction = -1;
           element.move_indent();
         }
       }
+      if (aliens2.length != 0) {
+        for (element of aliens2) {
+          element.direction = -1;
+          element.move_indent();
+        }
+      }
+      if (aliens.length != 0) {
+        for (element of aliens) {
+          element.direction = -1;
+          element.move_indent();
+        }
+      }
+      
     }
   }
 

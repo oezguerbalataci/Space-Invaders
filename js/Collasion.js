@@ -42,7 +42,7 @@ function bulletAlienCollasion(rect1, rect2) {
   if (
     rect1.x < rect2.x + rect2.w-16 && //Edited properties because of pixel correction
     rect1.x + rect1.w > rect2.x+16 &&
-    rect1.y < rect2.y + rect2.h-32 &&
+    rect1.y < rect2.y + rect2.h-20 &&
     rect1.h + rect1.y > rect2.y+32  
   ) {
     // collision detected!
