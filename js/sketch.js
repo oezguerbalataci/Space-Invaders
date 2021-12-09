@@ -68,7 +68,7 @@ function draw() {
   checkColDetBulletandPlayer();
   alienCollide(); // check bullet and allien collide
   alienMove();
-  if(Math.floor(Math.random()*30) == 2){
+  if(Math.floor(Math.random()*100) % 42 == 0){
     if(aliens.length!=0){
       let tmp= aliens[Math.floor((Math.random()*aliens.length))];
       alienBullet = new AlienProjectile(tmp.x,tmp.y,alienBulletImg);
