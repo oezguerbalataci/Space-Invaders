@@ -2,7 +2,7 @@
  Space Invaders like clone written in Javascript with p5.js
  
 ## Click the link below to play online
-[Space Invaders Click to play online](https://oezguerbalataci.github.io/Space-Invaders/ "Space Invaders")
+[Space Invaders ](https://oezguerbalataci.github.io/Space-Invaders/ "Space Invaders")
 
  
 ## How to Install
