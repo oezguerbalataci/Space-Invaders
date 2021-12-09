@@ -8,7 +8,10 @@ let alienBullets =[];
 
 
 function setup() {
+  // setup frame rate
   frameRate(fr);
+
+  // load images
   bg = loadImage("images/background.png");
   my_canvas = createCanvas(1024, 768);
   my_canvas.parent('my_canvas');
@@ -18,6 +21,8 @@ function setup() {
   healtImg = loadImage('images/heart.png')
   spaceship = new Player(1024 / 2 - 64, 768 - 64, spaceImg,healtImg);
   alienBulletImg = loadImage("images/laser.png")
+
+  // Create the first aliens
   for (i = 0; i <= 7; i++) {
     if (aliens.length == 0) {
       alien = new Alien(0, 0, alienImg);
@@ -49,25 +54,34 @@ function setup() {
   }
 }
 
+// Built in function in p5.js to Draw on canvas
 function draw() {
   background(179,229,252);
   spaceship.show();
   spaceship.show_health();
   checkCollasionAlienandPlayer();
 
+  
+  // remove alien lasers when the pass the screen height  
   if(alienBullets!=0){
     for(element of alienBullets){ 
       index = alienBullets.indexOf(element);
       if(element.y>768+32){
         alienBullets.splice(index,1);
       }
-      element.show();
     } 
   }
+  // draw alien lasers
+  for(element of alienBullets){
+    element.show();
+  }
+
   run();
   checkColDetBulletandPlayer();
   alienCollide(); // check bullet and allien collide
   alienMove();
+
+  // Create alien lasers by giving them the x and y cordinates of random aliens in the array
   if(Math.floor(Math.random()*100) % 42 == 0){
     if(aliens.length!=0){
       let tmp= aliens[Math.floor((Math.random()*aliens.length))];

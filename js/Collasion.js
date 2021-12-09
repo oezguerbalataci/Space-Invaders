@@ -1,3 +1,4 @@
+// check if Bullets hit Aliens
 function alienCollide() {
   //---- SENDs
   for (i of bullets) {
@@ -33,10 +34,13 @@ function alienCollide() {
     }
   }
 }
-// ---- Checks if the bullet and the alien object Collides
+
+
+// 2D Collasion Checker Function
+
 function bulletAlienCollasion(rect1, rect2) {
   if (
-    rect1.x < rect2.x + rect2.w-16 &&
+    rect1.x < rect2.x + rect2.w-16 && //Edited properties because of pixel correction
     rect1.x + rect1.w > rect2.x+16 &&
     rect1.y < rect2.y + rect2.h-16 &&
     rect1.h + rect1.y > rect2.y+16  
@@ -49,6 +53,7 @@ function bulletAlienCollasion(rect1, rect2) {
   }
 }
 
+// Remove the Alien and decrease Player hp by one when hit by alien or when they get away
 function checkCollasionAlienandPlayer() {
   for (i of aliens) {
     if (bulletAlienCollasion(spaceship, i) == 0 || i.y>=spaceship.y) {
@@ -73,6 +78,7 @@ function checkCollasionAlienandPlayer() {
   }
 }
 
+// Decrease 1 Hp point whe the Alien laser hits the player Also deletes the bullet
 function checkColDetBulletandPlayer(){
   for(i of alienBullets){
     if(bulletAlienCollasion(spaceship,i)== 0){
