@@ -84,7 +84,7 @@ function draw() {
   alienMove();
 
   // Create alien lasers by giving them the x and y cordinates of random aliens in the array
-  if(Math.floor(Math.random()*100) % 42 == 0){
+  if(random(1)<0.06){
     if(aliens.length!=0){
       let tmp= aliens[Math.floor((Math.random()*aliens.length))];
       alienBullet = new AlienProjectile(tmp.x,tmp.y,alienBulletImg);
