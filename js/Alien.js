@@ -84,7 +84,7 @@ function alienMove() {
 
 // Function to create aliens when there is none
 function createAliens() {
-  if (aliens.length == 0) {
+  if (aliens.length == 0 && aliens2.length ==0 && aliens3.length==0) {
     for (i = 0; i <= 7; i++) {
       if (aliens.length == 0) {
         alien = new Alien(0, 0, alienImg);
